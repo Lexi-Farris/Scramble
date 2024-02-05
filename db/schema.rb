@@ -10,13 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_02_05_185317) do
+ActiveRecord::Schema[7.0].define(version: 2024_02_05_194824) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "points", force: :cascade do |t|
     t.string "letter"
     t.integer "worth"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "user_words", force: :cascade do |t|
+    t.string "word"
+    t.integer "word_value"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
