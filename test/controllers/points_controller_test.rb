@@ -18,8 +18,5 @@ class PointsControllerTest < ActionDispatch::IntegrationTest
     assert_equal ["letter", worth], data.keys
   end
 
-  test ""
-  end
-
 end
  
