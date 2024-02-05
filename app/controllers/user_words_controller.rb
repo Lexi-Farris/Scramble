@@ -10,4 +10,12 @@ class UserWordsController < ApplicationController
     render :show
   end
 
+  def create
+    @user_word = UserWord.create(
+      word: params[:word],
+      word_value: params["word_value"],
+    )
+    render :show
+  end
+
 end
