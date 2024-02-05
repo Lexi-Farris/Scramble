@@ -1,7 +1,7 @@
 class PointsController < ApplicationController
   
   def index
-    @point = Point.all 
+    @points = Point.all 
     render :index 
   end
 

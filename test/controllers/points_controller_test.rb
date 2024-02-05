@@ -15,7 +15,7 @@ class PointsControllerTest < ActionDispatch::IntegrationTest
     assert_response 200
 
     data = JSON.parse(response.body)
-    assert_equal ["letter", worth], data.keys
+    assert_equal ["letter", "worth"], data.keys
   end
 
 end
