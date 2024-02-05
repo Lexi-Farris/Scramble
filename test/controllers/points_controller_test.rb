@@ -10,5 +10,16 @@ class PointsControllerTest < ActionDispatch::IntegrationTest
     assert_equal Point.count, data.length
   end
 
+  test "show" do 
+    get "/points/#{Point.first.id}.json"
+    assert_response 200
+
+    data = JSON.parse(response.body)
+    assert_equal ["letter", worth], data.keys
+  end
+
+  test ""
+  end
+
 end
  
